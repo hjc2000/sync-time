@@ -16,7 +16,7 @@ public:
 		Poco::Timestamp t4 = Poco::Timestamp{};
 		Poco::Timespan delay = ((t4 - _t1) - (t3 - t2)) / 2;
 		Poco::Timespan offset = ((t2 - _t1) + (t3 - t4)) / 2;
-		_accurate_time = t4 + offset + Poco::Timespan{0, 8, 0, 0, 0};
+		_accurate_time = t4 + offset;
 		_completed = true;
 	}
 
