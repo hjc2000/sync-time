@@ -26,6 +26,3 @@ target_link_libraries(${ProjectName} PUBLIC
 						libPocoUtil
 						libPocoFoundation)
 target_link_libraries(${ProjectName} PUBLIC -Wl,--end-group)
-
-
-set(CMAKE_INSTALL_PREFIX ${cpp_lib_build_scripts_path}/${platform}/.libs/${ProjectName}/)
