@@ -13,9 +13,6 @@ if(1)
 endif()
 
 
-include(target_import_base)
-
-
 add_executable(${ProjectName})
 target_import_src(${ProjectName})
 
