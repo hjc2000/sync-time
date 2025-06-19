@@ -14,10 +14,8 @@ int main()
 
 	std::cout << "从 NTP 服务器得到的时间: " << formatted_time << std::endl;
 
-	/**
-	 * 操作系统自带时区功能，所以设置时间时不要手动处理时区带来的时间偏移，
-	 * 否则会造成偏移 2 次，变成 UTC+16.
-	 */
+	// 操作系统自带时区功能，所以设置时间时不要手动处理时区带来的时间偏移，
+	// 否则会造成偏移 2 次，变成 UTC+16.
 	base::TimePointSinceEpoch time_point{std::chrono::microseconds{accurate_time.epochMicroseconds()}};
 	base::time::SetRealTime(time_point);
 	return 0;
